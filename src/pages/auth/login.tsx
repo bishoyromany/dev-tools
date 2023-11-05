@@ -16,7 +16,7 @@ type Inputs = {
 
 const Form = () => {
   const params = useSearchParams()!;
-  const session = useSession();
+  // const session = useSession();
   const router = useRouter();
 
   const {
@@ -36,9 +36,9 @@ const Form = () => {
     setError(params.get("error"));
   }, [params]);
 
-  if (session.status === "authenticated") {
-    router?.push("/my/dashboard");
-  }
+  // if (session.status === "authenticated") {
+  //   router?.push("/my/dashboard");
+  // }
 
   const formSubmit: SubmitHandler<Inputs> = (form) => {
     const { email, password } = form;
